@@ -1,4 +1,55 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.weather-widget {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(to top right, #d9e8f3, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(101, 91, 255, 0.263);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #333;
+}
+
+.weather-widget div {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.weather-widget .temp {
+  font-size: 28px;
+  font-weight: bold;
+  justify-content: center;
+  background-color: #fffec2;
+}
+
+.weather-widget .wind::before {
+  content: "🌬️Швидкість вітру: ";
+  margin-right: 8px;
+}
+
+.weather-widget .uv::before {
+  content: "☀️ УФ :";
+  margin-right: 8px;
+}
+
+.weather-widget .humid::before {
+  content: "💧 Вологість :";
+  margin-right: 8px;
+}
+
+.weather-widget .precip::before {
+  content: "🌧️ Опади :";
+  margin-right: 8px;
 }
