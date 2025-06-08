@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Підключення стилів -->
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Document</title>
-  </head>
-  <header>
-    <h1>Weather forecast</h1>
-    <div class="city"></div>
+  <!-- Підключення стилів -->
+  <link rel="stylesheet" href="style.css" />
 
+  <title>Document</title>
+</head>
+<header>
+  <h1>Weather forecast</h1> 
+  <form>
+    <input id="searching" name="city" type="text" autocomplete="country">
+    <button type="submit">Пошук</button>
+  </form>
+  <div class="city"></div>
+ 
 
-  </header>
-  <body>
-    <div class="weather-widget">
-  <div class="temp">25°C</div>
-  <div class="wind">🌬️ 15 км/год</div>
-  <div class="uv">☀️ УФ: 5</div>
-  <div class="humid">💧 Вологість: 60%</div>
-  <div class="precip">🌧️ Опади: 20%</div>
-</div>
-<div class="days"></div>
+</header>
+
+<body>
+  <div class="weather-widget">
+    <div class="temp">25°C</div>
+    <div class="wind">🌬️ 15 км/год</div>
+    <div class="uv">☀️ УФ: 5</div>
+    <div class="humid">💧 Вологість: 60%</div>
+    <div class="precip">🌧️ Опади: 20%</div>
+  </div>
+  <div class="days"></div>
 
   <div class="days">
     <div class="day">
@@ -37,14 +43,13 @@
   </div>
 
 
-    <!-- Підключення FontAwesome для використання текстових іконок -->
-    <script
-      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Підключення FontAwesome для використання текстових іконок -->
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
 
-    <!-- Підключення локального скрипта -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Підключення локального скрипта -->
+  <script src="script.js"></script>
+</body>
+
 </html>

@@ -27,3 +27,6 @@ fetch("http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f1114402
         `
     })
 }) 
+
+const inputElement = document.getElementById("name");
+console.log(inputElement.autocomplete);
