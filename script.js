@@ -37,3 +37,10 @@ document.querySelector(`#searching`).addEventListener("change", (e) => {
 })
 
 getWeather("Kyiv")
+
+document.querySelector(`#search`).addEventListener("input", (e)=> {
+    console.log(e.target.value)
+    fetch(`http://api.weatherapi.com/v1/search.json?key=f030cb6a5047432399f111440250106&q=${e.target.value}`).then(res => res.json()).then(data =>{
+        document.querySelector("#searching").innerHTML = data.map(c=>`<option value="${c.name}">${c.name}</option>`).join("")
+    })
+})
