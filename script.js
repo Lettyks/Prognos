@@ -1,8 +1,5 @@
 let data;
 
-
-
-
 function getWeather(city) {
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f111440250106&q=${city}&days=14&aqi=no&alerts=no`)
         .then(res => res.json())
@@ -15,6 +12,7 @@ function getWeather(city) {
             document.querySelector(".uv").innerHTML = data.current.uv
             document.querySelector(".humid").innerHTML = data.current.humidity + "%"
             document.querySelector(".precip").innerHTML = data.current.precip_mm + "мм"
+            document.querySelector(".days").innerHTML = ''
 
             data.forecast.forecastday.forEach(el => {
                 document.querySelector(".days").innerHTML += `
@@ -32,5 +30,10 @@ function getWeather(city) {
             })
         })
 }
+
+document.querySelector(`#searching`).addEventListener("change", (e) => {
+    console.log(e.target.value)
+    getWeather(e.target.value)
+})
 
 getWeather("Kyiv")
