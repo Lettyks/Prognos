@@ -1,6 +1,10 @@
 let data;
 
-fetch("http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f111440250106&q=London&days=14&aqi=no&alerts=no")
+
+
+
+function getWeather(city) {
+fetch(`http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f111440250106&q=${city}&days=14&aqi=no&alerts=no`)
 .then (res => res.json ())
 .then (d => {
     data = d
@@ -27,6 +31,4 @@ fetch("http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f1114402
         `
     })
 }) 
-
-const inputElement = document.getElementById("name");
-console.log(inputElement.autocomplete);
+}
