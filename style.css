@@ -4,8 +4,9 @@
 }
 
 body{
-  background: linear-gradient(to bottom, #cbe1ff, #ffffff); /* синій зверху, світло-блакитний знизу */
-  transition: backgroundб 0.5s ease;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 header{
@@ -153,6 +154,7 @@ h1{
 header .city {
     font-size: 35px;
     margin: 10px;
+    font-family: "Unbounded";
 }
 
 #search{
