@@ -6,7 +6,6 @@
 body{
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 header{
@@ -155,11 +154,12 @@ header .city {
     font-size: 35px;
     margin: 10px;
     font-family: "Unbounded";
+    color: #7365a2;
 }
 
 #search{
-  width: 200px;
-  height: 23px;
+  width: 250px;
+  height: 25px;
   background-color: white;
   border-radius: 15px;
   border: none;
