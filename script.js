@@ -12,11 +12,11 @@ function getWeather(city) {
             if(data.current.condition.code > 1210 && data.current.condition.code < 1225){
                 document.body.style.backgroundImage = "url(https://sanjuanheadwaters.org/wp-content/uploads/2023/02/snow-falling-gif.gif)"
             }
-            if(data.current.condition.code = 1000){
+            if(data.current.condition.code > 1000){
                 document.body.style.backgroundImage = "url(https://i.pinimg.com/originals/51/29/98/512998939eb4d7097d95feaf8d1cf5f4.gif)"
             }
-            if(data.current.condition.code = 1003 && data.current.condition.code < 1030){
-                document.body.style.backgroundImage = "url(https://cdnimpuls.com/voxnews.al/media3/-640-0-giphy-1678084417.gif)"
+            if(data.current.condition.code > 1003 && data.current.condition.code < 1030){
+                document.body.style.backgroundImage = '"url(https://cdnimpuls.com/voxnews.al/media3/-640-0-giphy-1678084417.gif)"'
             }
             document.querySelector(".city").innerHTML = data.location.name
             document.querySelector(".temp").innerHTML = "Температура: " + data.current.temp_c + "℃"
