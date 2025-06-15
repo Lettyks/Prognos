@@ -4,7 +4,7 @@ function getWeather(city) {
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=f030cb6a5047432399f111440250106&q=${city}&days=14&aqi=no&alerts=no`)
         .then(res => res.json())
         .then(d => {
-            console.log(data)
+            console.log(d)
             data = d
             document.querySelector(".city").innerHTML = data.location.name
             document.querySelector(".temp").innerHTML = "Температура: " + data.current.temp_c + "℃"
@@ -43,4 +43,9 @@ document.querySelector(`#search`).addEventListener("input", (e)=> {
     fetch(`http://api.weatherapi.com/v1/search.json?key=f030cb6a5047432399f111440250106&q=${e.target.value}`).then(res => res.json()).then(data =>{
         document.querySelector("#searching").innerHTML = data.map(c=>`<option value="${c.name}">${c.name}</option>`).join("")
     })
+})
+
+document.querySelector(".but").addEventListener("click", function (){
+    let city = document.querySelector(`#search`).value
+    getWeather(city)
 })
