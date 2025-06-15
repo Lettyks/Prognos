@@ -6,6 +6,9 @@ function getWeather(city) {
         .then(d => {
             console.log(d)
             data = d
+            if(data.current.condition.code > 1000 && data.current.condition.code < 1050){
+                document.body.style.background = "url()"
+            }
             document.querySelector(".city").innerHTML = data.location.name
             document.querySelector(".temp").innerHTML = "Температура: " + data.current.temp_c + "℃"
             document.querySelector(".wind").innerHTML = data.current.wind_kph + "км/год"
