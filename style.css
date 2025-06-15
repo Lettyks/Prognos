@@ -150,7 +150,8 @@ h1{
   }
 }
 
-.searchBar .city {
-    font-size: 70px;
+header .city {
+    font-size: 35px;
+    margin: 10px;
 }
 
