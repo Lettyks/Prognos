@@ -155,3 +155,17 @@ header .city {
     margin: 10px;
 }
 
+#search{
+  width: 200px;
+  height: 23px;
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+}
+
+.but {
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 1000%;
+}
