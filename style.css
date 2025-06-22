@@ -50,7 +50,7 @@ h1{
 
 .weather-widget .temp {
   font-family: "Unbounded";
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   justify-content: center;
   background-color: #fffec2;
@@ -137,20 +137,6 @@ h1{
   color: #4fc3f7;
 }
 
-
-@media (max-width: 600px) {
-  .days {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
-  }
-
-  .day {
-    flex: 0 0 auto;
-  }
-}
-
 header .city {
     font-size: 35px;
     margin: 10px;
@@ -175,15 +161,15 @@ header .city {
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5); /* Dark overlay */
+  background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
@@ -199,11 +185,14 @@ header .city {
 }
 
 .modal-content h2 {
-  color: #e74c3c;
+  font-family: "Unbounded";
+  color: #df4c4c;
   margin-bottom: 10px;
 }
 
 .modal-content p {
+  font-family: "Unbounded";
+  color: #493e3e;
   font-size: 16px;
 }
 
@@ -212,11 +201,11 @@ header .city {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
-  color: #aaa;
+  color: #a4a4a4;
 }
 
 .close-button:hover {
-  color: #000;
+  color: #493e3e;
 }
 
 @keyframes fadeIn {
@@ -224,3 +213,77 @@ header .city {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    padding: 10px;
+  }
+
+  header .city {
+    font-size: 24px;
+    margin: 6px;
+  }
+
+  .weather-widget {
+    max-width: 95%;
+    margin: 20px;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .weather-widget div {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .weather-widget .temp {
+    font-size: 24px;
+  }
+
+  .days {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .day {
+    width: calc(50% - 20px); /* 2 в ряд */
+    min-width: 140px;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .day img {
+    width: 44px;
+    height: 44px;
+  }
+
+  #search {
+    width: 180px;
+    height: 26px;
+    font-size: 14px;
+  }
+
+  .but {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 20px;
+  }
+
+  .modal-content p {
+    font-size: 14px;
+  }
+
+  .close-button {
+    font-size: 24px;
+  }
+}
