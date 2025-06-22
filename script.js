@@ -42,8 +42,24 @@ function getWeather(city) {
             })
 
         }).catch(err => {
-            document.querySelector(main)
-        })
+            const modal = document.getElementById("errorModal");
+            const closeBtn = document.querySelector(".close-button");
+
+            modal.style.display = "block";
+
+            // Close modal on click
+            closeBtn.onclick = () => {
+                modal.style.display = "none";
+            };
+
+            // Close modal on outside click
+            window.onclick = (event) => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+
 }
 
 document.querySelector(`#searching`).addEventListener("change", (e) => {

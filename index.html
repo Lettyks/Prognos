@@ -37,18 +37,25 @@
 </header>
 
 <body>
-  <main>
 
-    <div class="weather-widget">
-      <div class="temp"></div>
-      <div class="wind"></div>
-      <div class="uv"></div>
-      <div class="humid"></div>
-      <div class="precip"></div>
+
+  <div class="weather-widget">
+    <div class="temp"></div>
+    <div class="wind"></div>
+    <div class="uv"></div>
+    <div class="humid"></div>
+    <div class="precip"></div>
+  </div>
+
+  <div class="days"></div>
+
+  <div id="errorModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Помилка</h2>
+      <p>Такого міста не знайдено</p>
     </div>
-
-    <div class="days"></div>
-  </main>
+  </div>
 
   <!-- Підключення FontAwesome для використання текстових іконок -->
   <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
