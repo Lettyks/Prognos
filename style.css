@@ -15,16 +15,6 @@ header{
   padding: 20px;
 }
 
-footer{
-  background-color: #838db8d3;
-  height: 15vh;
-}
-
- p{
-  font-family: "Unbounded";
-  padding: 5vh;
-}
-
 h1{
   font-family: "Unbounded";
   font-size: 45px;
@@ -169,7 +159,8 @@ header .city {
 }
 
 #search{
-  width: 250px;
+  padding-left: 10px;
+  width: 240px;
   height: 25px;
   background-color: white;
   border-radius: 15px;
