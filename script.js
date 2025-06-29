@@ -6,7 +6,7 @@ function getWeather(city) {
         .then(d => {
             console.log(d)
             data = d
-            if (d.current.precip_in < 0.1) {
+            if (d.current.precip_in < 0.05) {
                 document.body.style.backgroundImage = "url(https://i.pinimg.com/originals/51/29/98/512998939eb4d7097d95feaf8d1cf5f4.gif)"
             }
             else if (d.current.precip_in < 10) {
