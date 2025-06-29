@@ -6,13 +6,13 @@ function getWeather(city) {
         .then(d => {
             console.log(d)
             data = d
-            if (d.current.precip_in < 1) {
+            if (d.current.precip_in < 0.5) {
                 document.body.style.backgroundImage = "url(https://i.pinimg.com/originals/51/29/98/512998939eb4d7097d95feaf8d1cf5f4.gif)"
             }
-            else if (d.current.precip_in < 50) {
+            else if (d.current.precip_in < 10) {
                 document.body.style.backgroundImage = "url(https://i.makeagif.com/media/8-08-2017/U8cAor.gif)"
             }
-            else if (d.current.precip_in < 80) {
+            else if (d.current.precip_in < 30) {
                 document.body.style.backgroundImage = "url(https://static.wixstatic.com/media/5acbb4_68aecc720ed54b5a89edf655cb6f9f6e~mv2.gif)"
             }
             else {
